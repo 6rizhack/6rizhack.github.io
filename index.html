@@ -7,6 +7,14 @@
 		<link rel="stylesheet" href="style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Cyriaque Perier">
+		<script type="text/javascript">
+			var adfly_id = 15224871;
+			var adfly_advert = 'banner';
+			var adfly_protocol = 'https';
+			var adfly_domain = 'j.gs';
+			var domains = ['depositfiles.com','rapidshare.com','vip-file.com'];
+		</script>
+		<script src="https://cdn.adf.ly/js/link-converter.js"></script>
 	</head>
 	<body>
 	    <div class="content">
@@ -24,4 +32,30 @@
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+	<script type="text/javascript">
+		let lastH = document.body.clientHeight;
+		let lastW = document.body.clientWidth;
+		window.addEventListener('resize', function () { 
+			
+
+			console.log("resize event: " + Math.abs(lastW - document.body.clientWidth) + " & " + Math.abs(lastH - document.body.clientHeight) + " || " + document.body.clientWidth + " & " + document.body.clientHeight)
+
+			if(Math.abs(lastW - document.body.clientWidth) > 30){
+				window.location.reload();
+				lastH = document.body.clientHeight;
+				lastW = document.body.clientWidth;
+			}
+
+			else if(Math.abs(lastH - document.body.clientHeight) > 30){
+				window.location.reload();
+				lastH = document.body.clientHeight;
+				lastW = document.body.clientWidth;
+			}
+
+			else{
+				lastH = document.body.clientHeight;
+				lastW = document.body.clientWidth;
+			}
+		});
+	</script>
 </html>
